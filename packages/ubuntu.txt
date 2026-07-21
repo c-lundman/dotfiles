@@ -1,4 +1,10 @@
 stow
+ripgrep
+fd
+fzf
+bat
+jq
+just
+tmux
 marimo
 neovim
-
