@@ -3,5 +3,6 @@ fzf
 bat
 jq
 just
+ghostty
 tmux
 neovim
