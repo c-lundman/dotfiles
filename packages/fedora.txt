@@ -6,3 +6,17 @@ just
 ghostty
 tmux
 neovim
+fish
+dms
+niri
+waybar
+mako
+fuzzel
+swaybg
+swayidle
+swaylock
+wl-clipboard
+cliphist
+brightnessctl
+playerctl
+pavucontrol
