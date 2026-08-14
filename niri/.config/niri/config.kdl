@@ -89,7 +89,7 @@ input {
     mouse {
         // off
         // natural-scroll
-        accel-speed 0.2
+        // accel-speed 0.2
         accel-profile "flat"
         // scroll-method "no-scroll"
     }
@@ -133,6 +133,7 @@ layout {
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
     center-focused-column "on-overflow"
+    always-center-single-column
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
         // Proportion sets the width as a fraction of the output width, taking gaps into account.
@@ -146,7 +147,8 @@ layout {
     // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
     // preset-window-heights { }
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    // default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.7; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
     // By default focus ring and border are rendered as a solid background rectangle
@@ -160,7 +162,7 @@ layout {
     // Alternatively, you can override it with a window rule called
     // `draw-border-with-background`.
     border {
-        // off
+        off
         width 1
         active-color   "#707070"      // Neutral gray
         inactive-color "#d0d0d0"      // Light gray

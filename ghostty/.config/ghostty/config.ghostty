@@ -1,0 +1,10 @@
+shell-integration-features = no-cursor
+cursor-style = block
+background-opacity = 0.85
+background-blur = true
+window-padding-x = 4
+window-padding-y = 4
+window-padding-color = background
+window-decoration = none
+# theme = Onenord
+theme = Aura

@@ -11,7 +11,7 @@ sudo dnf copr enable avengemedia/dms
 sudo dnf install stow $(cat packages/fedora.txt)
 
 # Stow the dotfiles
-stow nvim tmux ghostty niri
+stow nvim tmux ghostty niri fish
 
 # Reload user systemd after installing/updating unit files.
 systemctl --user daemon-reload
