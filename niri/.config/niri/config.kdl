@@ -97,8 +97,8 @@ input {
     trackpoint {
         // off
         // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
+        accel-speed 0.6
+        accel-profile "flat"
         // scroll-method "on-button-down"
         // scroll-button 273
         // scroll-button-lock
@@ -125,7 +125,7 @@ input {
 layout {
     // Set gaps around windows in logical pixels.
     background-color "transparent"
-    gaps 8
+    gaps 0
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -163,7 +163,7 @@ layout {
     // `draw-border-with-background`.
     border {
         off
-        width 1
+        width 0
         active-color   "#707070"      // Neutral gray
         inactive-color "#d0d0d0"      // Light gray
         urgent-color   "#cc4444"      // Softer red
@@ -174,8 +174,8 @@ layout {
     //     offset x=0 y=5
     //     color "#0007"
     // }
-    struts {
-    }
+    // struts {
+    // }
 }
 layer-rule {
     match namespace="^quickshell$"
