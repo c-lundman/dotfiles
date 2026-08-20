@@ -11,3 +11,4 @@ fish
 dms
 niri
 fastfetch
+starship
