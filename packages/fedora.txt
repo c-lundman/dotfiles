@@ -2,6 +2,7 @@ ripgrep
 fzf
 fd-find
 bat
+tree
 jq
 just
 ghostty
