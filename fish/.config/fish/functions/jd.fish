@@ -1,5 +1,4 @@
 function jd
-    # set file (fd --type d $argv | fzf --preview 'bat --color=always {}')
-    set file (fd --type d $argv | fzf)
-    test -n "$file"; and cd "$file"
+    set dir (fd --type d $argv | fzf)
+    test -n "$dir"; and cd "$dir"; and pwd; and tree -L 2
 end
