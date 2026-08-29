@@ -27,5 +27,5 @@ sudo flatpak install flathub com.valvesoftware.Steam
 
 # Change default shell
 chsh -s "$(which fish)"
-# fish_add_path tilde/.local/bin
+fish_add_path ~/.local/bin
 
