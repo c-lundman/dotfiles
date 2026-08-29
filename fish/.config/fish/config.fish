@@ -1,6 +1,6 @@
 set -g fish_greeting ""
 if status is-interactive
-    fastfetch
+    fastfetch --logo-type small
     starship init fish | source
 end
 
