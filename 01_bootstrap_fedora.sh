@@ -12,7 +12,7 @@ sudo dnf copr enable atim/starship
 sudo dnf install stow $(cat packages/fedora.txt)
 
 # Stow the dotfiles
-stow nvim tmux ghostty niri fish
+stow nvim tmux ghostty niri fish marimo
 
 # Reload user systemd after installing/updating unit files.
 systemctl --user daemon-reload
