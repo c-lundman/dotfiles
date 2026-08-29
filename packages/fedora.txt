@@ -3,7 +3,9 @@ fzf
 fd-find
 bat
 tree
+curl
 jq
+uv
 just
 ghostty
 tmux
