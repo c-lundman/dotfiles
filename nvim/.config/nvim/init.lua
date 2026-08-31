@@ -347,7 +347,7 @@ require("lazy").setup({
     event = "VimEnter",
     opts = {
       -- delay between pressing a key and opening which-key (milliseconds)
-      delay = 500,
+      delay = 2000,
       preset = "classic",
       icons = { mappings = vim.g.have_nerd_font },
 
