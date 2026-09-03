@@ -15,3 +15,5 @@ dms
 niri
 fastfetch
 starship
+cmake
+gcc-c++
