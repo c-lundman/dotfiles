@@ -2,9 +2,14 @@
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
+
+// Voice -> tmux -> Codex CLI
+include optional=true "codex-voice-bridge.kdl"
+
 config-notification {
     disable-failed
 }
+
 // Outputs from existing configuration
 /-output "eDP-1" {
     // Uncomment this line to disable this output.
@@ -147,8 +152,8 @@ layout {
     // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
     // preset-window-heights { }
     // You can change the default width of the new windows.
-    // default-column-width { proportion 0.5; }
-    default-column-width { proportion 0.7; }
+    default-column-width { proportion 0.5; }
+    // default-column-width { proportion 0.7; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
     // By default focus ring and border are rendered as a solid background rectangle
