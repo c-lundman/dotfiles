@@ -9,6 +9,7 @@ set -euo pipefail
 sudo dnf copr enable scottames/ghostty
 sudo dnf copr enable avengemedia/dms
 sudo dnf copr enable atim/starship
+sudo dnf copr enable atim/himalaya
 sudo dnf install stow $(cat packages/fedora.txt)
 
 # Stow the dotfiles
