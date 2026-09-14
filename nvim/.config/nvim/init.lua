@@ -246,14 +246,33 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 
 -- CL: Show local repo tree, exit with q
 vim.keymap.set("n", "<leader>t", function()
-  vim.cmd("botright 15new")
+  local parent_win = vim.api.nvim_get_current_win()
+
+  vim.cmd("botright new")
   vim.cmd(
-    "terminal tree -a -C --gitignore --prune --dirsfirst"
+    "terminal tree -a -C --gitignore --prune --dirsfirst -I '.git'"
   )
   vim.cmd("resize 999")
+
+  local tree_buf = vim.api.nvim_get_current_buf()
+
   vim.keymap.set("n", "q", "<cmd>q<CR>", {
-    buffer = true,
+    buffer = tree_buf,
     silent = true,
+  })
+
+  vim.keymap.set("n", "<leader>sf", function()
+    vim.cmd("close")
+
+    if vim.api.nvim_win_is_valid(parent_win) then
+      vim.api.nvim_set_current_win(parent_win)
+    end
+
+    require("telescope.builtin").find_files()
+  end, {
+    buffer = tree_buf,
+    silent = true,
+    desc = "Find file and close repo tree",
   })
 end, { desc = "Show repo tree" })
 
