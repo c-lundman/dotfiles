@@ -130,6 +130,7 @@ vim.o.smartcase = true
 
 -- Keep signcolumn on by default
 vim.o.signcolumn = "yes"
+-- vim.o.signcolumn = "number"
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -242,6 +243,19 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 -- -- CL: Adding new empty lines
 -- vim.keymap.set({ "n", "i" }, "<leader>n", "<Esc>]<Space>", { remap = true })
 -- vim.keymap.set({ "n", "i" }, "<leader>m", "<Esc>[<Space>", { remap = true })
+
+-- CL: Show local repo tree, exit with q
+vim.keymap.set("n", "<leader>t", function()
+  vim.cmd("botright 15new")
+  vim.cmd(
+    "terminal tree -a -C --gitignore --prune --dirsfirst"
+  )
+  vim.cmd("resize 999")
+  vim.keymap.set("n", "q", "<cmd>q<CR>", {
+    buffer = true,
+    silent = true,
+  })
+end, { desc = "Show repo tree" })
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
