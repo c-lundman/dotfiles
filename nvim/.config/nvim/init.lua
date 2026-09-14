@@ -894,6 +894,9 @@ require("lazy").setup({
     config = function(plugin)
       vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
       vim.cmd([[colorscheme aura-dark]])
+      -- vim.cmd([[colorscheme aura-dark-soft-text]])
+      -- vim.cmd([[colorscheme aura-soft-dark]])
+      -- vim.cmd([[colorscheme aura-soft-dark-soft-text]])
       vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
       vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
     end
